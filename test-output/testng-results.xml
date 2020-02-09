@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="54502" started-at="2020-02-09T14:21:08Z" finished-at="2020-02-09T14:22:02Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="54502" started-at="2020-02-09T14:21:08Z" finished-at="2020-02-09T14:22:02Z">
+      <class name="testcases.TestLogin">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TestLogin@239963d8]" name="beforeTest" is-config="true" duration-ms="31140" started-at="2020-02-09T19:51:08Z" finished-at="2020-02-09T19:51:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="Login()[pri:1, instance:testcases.TestLogin@239963d8]" name="Login" duration-ms="6377" started-at="2020-02-09T19:51:39Z" finished-at="2020-02-09T19:51:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TestLogin@239963d8]" name="afterTest" is-config="true" duration-ms="1" started-at="2020-02-09T19:51:45Z" finished-at="2020-02-09T19:51:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="Azimuth_maintenance()[pri:2, instance:testcases.TestLogin@239963d8]" name="Azimuth_maintenance" duration-ms="16942" started-at="2020-02-09T19:51:45Z" finished-at="2020-02-09T19:52:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Azimuth_maintenance -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TestLogin@239963d8]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-02-09T19:52:02Z" finished-at="2020-02-09T19:52:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- testcases.TestLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
