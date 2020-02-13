@@ -31,14 +31,14 @@ public class Legal_Module extends Common_Functions {
 		 
 		// MAP LAW TO CATEGORY
 		Click(2, "Map Law to Category");
-		DropDown("(//select[@_ngcontent-c15])[1]", "Banking");
-		DropDown("(//select[@_ngcontent-c15])[2]", "Mortgage");
-		Click(3, "(//span[@class=\"ag-selection-checkbox\"])[1]/span[2]");
-		DropDown("//select[@_ngcontent-c16]", "General");
-		DropDown("(//select[@_ngcontent-c17])[1]", "Both");
-		DropDown("(//select[@_ngcontent-c17])[2]", "All");
-		WindowScroller(0, 40);
-		Click(3, "//button[@_ngcontent-c16]");
+		DropDown("//select[@class='form-control ng-untouched ng-pristine ng-valid']", "Banking");
+		DropDown("//select[@class=\"form-group form-control ng-untouched ng-pristine ng-valid\"]", "Mortgage");
+		Click(3, "//button[@class=\"btn btn-primary\"]");
+		DropDown("//select[@name=\"asd\"]", "General");
+		DropDown("(//select[@class=\"form-control width-50 ng-untouched ng-pristine ng-star-inserted ng-valid\"])[1]", "Both");
+		DropDown("(//select[@class=\\\"form-control width-50 ng-untouched ng-pristine ng-star-inserted ng-valid\\\"])[2]", "All");
+	   //WindowScroller(0, 40);
+		Click(3, "//button[@class=\"btn btn-round-edge btn-line green_btn\"]");
 		
 
 	}

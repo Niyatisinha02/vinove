@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testcases.TestLogin">
+      <class name="testcases.Edit_Law">
         <methods>
-          <include name="Azimuth_maintenance"/>
-          <include name="beforeTest"/>
-          <include name="afterTest"/>
+          <include name="TestCases"/>
+          <include name="Login"/>
         </methods>
-      </class> <!-- testcases.TestLogin -->
+      </class> <!-- testcases.Edit_Law -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeTest;
 
 public class Common_Functions {
 	public WebDriver driver;
+	int Login=2;
 	
 	@BeforeTest
 	public void Login(){
@@ -21,12 +22,19 @@ public class Common_Functions {
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		if (Login==1) {
 		driver.get("https://dev-lineage.azimuthgrc.com/#/login");
 		driver.findElement(By.id("user_name")).sendKeys("mohd.zeeshan@mail.vinove.com");;
 		driver.findElement(By.id("Password")).sendKeys("Qwerty@123");;
+		}
+		else {
+			driver.get("https://qa-lineage.azimuthgrc.com/#/login");
+			driver.findElement(By.id("user_name")).sendKeys("mohd.zeeshan@mail.vinove.com");;
+			driver.findElement(By.id("Password")).sendKeys("Abc@1234");;
+		}
 		driver.findElement(By.id("termsConditions")).click();
 		driver.findElement(By.xpath("//button[text()='Login']")).click();
-		Assert.assertEquals(driver.findElement(By.xpath("(//*[text()='Search Laws'])[2]")).getText(), "Search Laws");
+		//Assert.assertEquals(driver.findElement(By.xpath("(//*[text()='Search Laws'])[2]")).getText(), "Search Laws");
 	}
 	
 	public void DropDown(String path, String value){
