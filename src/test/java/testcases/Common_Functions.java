@@ -12,6 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -96,6 +97,17 @@ WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.l
   }else {
 WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("path")));}
 }
+	
+	public void double_Click(String path) {
+		Actions act = new Actions(driver);
+		
+	    WebElement ele = driver.findElement(By.id(path));
+		act.doubleClick(ele).perform();
+		
+	}
+		
+		
+
 	
 	public void Javascroller(String path) {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;

@@ -2,19 +2,23 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" >
   <test  name="Test">
-  <parameter name="browser" value="chrome" />
-  <parameter name="environment" value="dev" />
+  <!--<parameter name="browser" value="chrome" />
+  <parameter name="environment" value="dev" /> -->
  
-    <classes>
-     
-      <class name="testcases.TestRole"/>
-      
-      
 
-
+     <classes>
+      <class name="testcases.Legal_Define_Law"/>
+      <class name="testcases.Edit_Law"/>
+      <class name="testcases.Change_in_Law"/>
     </classes>
-    </test>
-</suite> <!-- Suite -->
+ </test>
+</suite>
+      <!-- <class name="testcases.TestRole"/> -->
+      
+      
+
+
+ <!-- Suite -->
 
 
 

@@ -17,7 +17,7 @@ public class search_law extends Common_Functions{
 		Click(2,"Advanced Search");
 		DropDown("//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"]","Banking");
 		DropDown("//select[@class=\"form-group form-control ng-untouched ng-pristine ng-valid\"]","Mortgage");
-		TextField(3,"//input[@class=\"form-control ng-pristine ng-valid ng-touched\"]","1680");
+		TextField(3,"(//input[@type=\"text\"])[1]","1680");
 		Click(3,"(//button[@class=\"btn btn-primary\"])[1]");
 		Click(3,"(//div[@col-id=\"section\"])[2]");
 		
