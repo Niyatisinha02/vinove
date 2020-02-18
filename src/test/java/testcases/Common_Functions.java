@@ -1,20 +1,26 @@
 package testcases;
 
+import java.io.File;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 
 public class Common_Functions {
-	public WebDriver driver;
-	int Login=2;
+	public  static WebDriver driver;
+	int Login;
 	
 	@BeforeTest
 	public void Login(){
@@ -22,19 +28,21 @@ public class Common_Functions {
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		if (Login==1) {
+		if(Login==1) {
 		driver.get("https://dev-lineage.azimuthgrc.com/#/login");
 		driver.findElement(By.id("user_name")).sendKeys("mohd.zeeshan@mail.vinove.com");;
 		driver.findElement(By.id("Password")).sendKeys("Qwerty@123");;
-		}
+		driver.findElement(By.id("termsConditions")).click();
+		driver.findElement(By.xpath("//button[text()='Login']")).click();}
 		else {
 			driver.get("https://qa-lineage.azimuthgrc.com/#/login");
 			driver.findElement(By.id("user_name")).sendKeys("mohd.zeeshan@mail.vinove.com");;
 			driver.findElement(By.id("Password")).sendKeys("Abc@1234");;
+			driver.findElement(By.id("termsConditions")).click();
+			driver.findElement(By.xpath("//button[text()='Login']")).click();
+			
 		}
-		driver.findElement(By.id("termsConditions")).click();
-		driver.findElement(By.xpath("//button[text()='Login']")).click();
-		//Assert.assertEquals(driver.findElement(By.xpath("(//*[text()='Search Laws'])[2]")).getText(), "Search Laws");
+		Assert.assertEquals(driver.findElement(By.xpath("(//*[text()='Search Laws'])[2]")).getText(), "Search Laws");
 	}
 	
 	public void DropDown(String path, String value){
@@ -77,6 +85,17 @@ public class Common_Functions {
 		Thread.sleep(a); 
 		}
 	
+	public void explicitWait(int type, String path){
+   // Create object of WebDriverWait class
+  WebDriverWait wait=new WebDriverWait(driver,20);
+  // Wait till the element is not visible
+  if(type==1) {
+ WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("path")));
+  }else if(type==2) {
+WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("path")));
+  }else {
+WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("path")));}
+}
 	
 	public void Javascroller(String path) {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -97,5 +116,6 @@ public class Common_Functions {
             //ele.sendKeys("hexbyes");
         	JavascriptExecutor jse = (JavascriptExecutor)driver;
     		jse.executeScript("arguments[0].click();",ele );
-         System.out.println(ele.getText());}
-	}}
+         System.out.println(ele.getText());}}
+        
+}

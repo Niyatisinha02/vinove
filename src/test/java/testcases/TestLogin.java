@@ -15,7 +15,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
 public class TestLogin {
 
@@ -35,7 +34,7 @@ public class TestLogin {
 	public void Login() throws InterruptedException{
 		
 		driver.findElement(By.id("user_name")).sendKeys("mohd.zeeshan@mail.vinove.com");;
-		driver.findElement(By.id("Password")).sendKeys("Abc@1234");;
+		driver.findElement(By.id("Password")).sendKeys("Qwerty@123");;
 		driver.findElement(By.id("termsConditions")).click();
 		driver.findElement(By.xpath("//button[text()='Login']")).click();
 		Assert.assertEquals(driver.findElement(By.xpath("(//*[text()='Search Laws'])[2]")).getText(), "Search Laws");

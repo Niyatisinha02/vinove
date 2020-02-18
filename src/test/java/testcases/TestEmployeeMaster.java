@@ -19,7 +19,7 @@ public class TestEmployeeMaster extends PageObjectBase{
         homePage.clickOnCentralAdmin();
 
         employesMaster = homePage.employesMaster();
-        employesMaster.EnterDataOnCreateEmployes();add
+        employesMaster.EnterDataOnCreateEmployes();
 
 
 
