@@ -15,6 +15,7 @@ double_Click("menu3");
  Wait(2000);
  DropDown("//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"]", "Mortgage");
  TextField(3,"(//input[@type=\"text\"])[1]","§1024.40");
+ Click(3,"(//tbody[@class=\"ui-treetable-data ui-widget-content ng-star-inserted\"])[1]//td[2]/a");
  
 }
 

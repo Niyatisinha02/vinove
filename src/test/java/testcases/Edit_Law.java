@@ -3,7 +3,7 @@ package testcases;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
-public class Edit_Law extends Common_Functions{
+public class Edit_Law extends Common_Functions {
 	
 	@Test(enabled=false)
 	public void TestCases_Add_update_Delete() throws InterruptedException {
@@ -53,7 +53,10 @@ public class Edit_Law extends Common_Functions{
     System.out.println("Reuirement Updated from Edit Law Requirement");
     
     }
+    
+  
+    }
    
-	}
+	
 
 

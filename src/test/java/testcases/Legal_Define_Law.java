@@ -1,5 +1,7 @@
 package testcases;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class Legal_Define_Law extends Common_Functions{
@@ -18,5 +20,7 @@ public void Testcases() throws InterruptedException {
 	Wait(1000);
 	System.out.println("Completed Law :Legal Module");
 }
+
+
 
 }
