@@ -11,7 +11,11 @@ public class Change_in_Law extends Common_Functions{
 	Wait(2000);
 	DropDown("(//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"])[1]", "Banking");
 	Wait(1000);
-	DropDown("//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"]","Mortgage");
+	
+	//DropDown("//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"]","Mortgage");
+	// if login = dev //enable below line and comment above line
+	DropDown("(//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"])[2]","Mortgage");
+	
 	Click(3, "(//a[@class=\"treeDisplay ng-star-inserted\"])[2]");
 	TextField(3,"//input[@type=\"text\"]","§1024.40");
 	

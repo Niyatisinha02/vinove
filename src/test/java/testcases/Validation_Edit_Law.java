@@ -7,17 +7,17 @@ import org.testng.annotations.Test;
 public class Validation_Edit_Law extends Common_Functions{
 
 
-@Test(enabled=true)
-public void get_Law() throws InterruptedException {
+@Test
+public void Testcase1() throws InterruptedException {
 	Click(1, "menu1");
-	Click(2, "Define Law Requirements");
+	   Click(2, "Define Law Requirements");
 	DropDown("(//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"])[1]","Banking");
 	Wait(2000);
 	DropDown("//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"]","Mortgage");
-	Click(3,"(//div[@col-id=\"completed\"])[2]//a");
+	Click(3,"(//div[@col-id='categoryName'])[2]/following-sibling::div[2]");
 	Wait(2000);
 	
-	WebElement section = driver.findElement(By.xpath("(//div[@col-id=\"section\"])[3]//a"));
+	WebElement section = driver.findElement(By.xpath("(//div[@col-id=\"section\"])[5]//a"));
 	String value = section.getText();
 	System.out.println(value);
 
@@ -34,6 +34,7 @@ public void get_Law() throws InterruptedException {
 		
 		WebElement sec = driver.findElement(By.xpath("(//div[@col-id='section'])[2]//a"));
 		String value1 = sec.getText();
+		System.out.println(value1);
 		
 		//Comparision
 		if(value1.equals(value)) {
@@ -43,8 +44,8 @@ public void get_Law() throws InterruptedException {
 		else {
 			System.out.println("Not available");
 		}
-	    
-	    
+		
+
 	
 
 }

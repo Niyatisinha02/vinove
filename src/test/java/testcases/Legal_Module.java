@@ -6,7 +6,7 @@ public class Legal_Module extends Common_Functions {
 
 	@Test
 	public void TestCases() throws InterruptedException {
-		Wait(3000);
+	Wait(3000);
 		Click(1, "menu1");
 		Click(2, "Map Law to Industry Category");
 		Wait(2000);

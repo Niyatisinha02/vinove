@@ -14,7 +14,7 @@ public class Validation_Update_Law_To_Process extends Common_Functions {
 		DropDown("(//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"])[1]","Banking");
 		Wait(2000);
 		DropDown("//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"]","Mortgage");
-		Click(3,"(//div[@col-id=\"completed\"])[2]//a");
+		Click(3,"(//div[@col-id=\"completed\"])[4]//a");
 		Wait(2000);
 		
 		WebElement section = driver.findElement(By.xpath("(//div[@col-id=\"section\"])[3]//a"));
@@ -26,7 +26,7 @@ public class Validation_Update_Law_To_Process extends Common_Functions {
 		 Click(1, "menu14");
 		 Click(2,"Update Law to Process");
 		 DropDown("(//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"])[1]","Banking");
-		 DropDown("//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"]","Mortgage");
+		 DropDown("(//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"])[2]","Mortgage");
 		 Click(3,"(//button[@class=\"btn btn-primary\"])[2]");
 		 TextField(3,"//input[@type=\"text\"]", value);
 		 Wait(3000);

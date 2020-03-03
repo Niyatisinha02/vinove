@@ -5,14 +5,14 @@ import org.testng.annotations.Test;
 
 public class Edit_Law extends Common_Functions {
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void TestCases_Add_update_Delete() throws InterruptedException {
-    Wait(3000);
+    Wait(4000);
 	Javascroller("menu14");
 	Click(1, "menu14");
 	Click(2, "Edit Law Requirement");
 	DropDown("(//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"])[1]", "Banking");
-	DropDown("//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"]", "Mortgage");
+	DropDown("(//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"])[2]", "Mortgage");
 	Click(3, "(//button[@class=\"btn btn-primary\"])[2]");
 	Wait(2000);
 	Click(3, "(//div[@col-id='section'])[2]//a");
@@ -33,14 +33,19 @@ public class Edit_Law extends Common_Functions {
 	}
 	
 	
-    @Test(enabled=true)
+	
+    @Test(enabled=false)
     public void update() throws InterruptedException {
     Wait(3000);
     Javascroller("menu14");
     Click(1, "menu14");
     Click(2, "Edit Law Requirement");
     DropDown("(//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"])[1]", "Banking");
-	DropDown("//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"]", "Mortgage");
+	//DropDown("//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"]", "Mortgage");
+	//if(Login=\dev) { enable below line and comment above line
+	DropDown("(//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"])[2]","Mortgage");
+	
+	
 	Click(3, "(//button[@class=\"btn btn-primary\"])[2]");
 	Wait(2000);
 	TextField(3,"//input[@type=\"text\"]","§1024.40");
