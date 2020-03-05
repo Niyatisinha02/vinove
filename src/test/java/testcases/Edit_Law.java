@@ -15,7 +15,7 @@ public class Edit_Law extends Common_Functions {
 	DropDown("(//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"])[2]", "Mortgage");
 	Click(3, "(//button[@class=\"btn btn-primary\"])[2]");
 	Wait(2000);
-	Click(3, "(//div[@col-id='section'])[2]//a");
+	Click(3, "(//div[@col-id='section'])[3]//a");
 	selectList("//input[@type='checkbox']/following-sibling::label");
 	Click(3, "//span[text()='Add Requirement']");
 	DropDown("//select[@class=\"form-control ng-untouched ng-pristine ng-valid\"]", "Define Requirement");
